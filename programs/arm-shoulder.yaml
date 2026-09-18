@@ -1,0 +1,93 @@
+# Arm & Shoulder specialisation — Yash, returning after a 12-month layoff.
+# Built to look and behave like Jeff Nippard's Intermediate Workout Tracker
+# in Google Sheets, with the tutorial-video rows removed.
+#
+# Every superset must sit on ONE station with ONE attachment, or pair a
+# station with portable dumbbells. See docs/gym-constraints.md.
+
+name: Arm & Shoulder
+weeks: 50
+effort_scale: [Failed, "10 (Max Effort)", "9 (Hard)", "8 (Medium)", "7 (Easy)"]
+
+sessions:
+
+  - name: Session A (Mon)
+    first_date: 2026-07-27
+    rooms: [dumbbell, cable]
+    blocks:
+      - type: superset
+        label: SUPERSET A
+        note: one bench, two angles
+        exercises:
+          - {code: A1, name: Seated DB Shoulder Press, sets: 3, reps: "10-12", start: 12}
+          - {code: A2, name: EZ Bar Curl (loadable),   sets: 3, reps: "10-12", start: 14}
+      - type: superset
+        label: SUPERSET B
+        note: pulldown station + dumbbells carried over
+        exercises:
+          - {code: B1, name: Lat Pulldown,      sets: 3, reps: "8-12",  start: 42.5}
+          - {code: B2, name: DB Lateral Raise,  sets: 3, reps: "12-15", start: 5}
+      - type: superset
+        label: SUPERSET C
+        note: one cable station, rope stays on
+        exercises:
+          - {code: C1, name: Cable Overhead Tri Extension,  sets: 3, reps: "10-15",     start: 10}
+          - {code: C2, name: Bayesian Cable Curl (rope),    sets: 3, reps: "10-15/arm", start: 12.5}
+      - {type: single, name: Seated Cable Row,                  sets: 3, reps: "8-12",  start: 42.5}
+      - {type: single, name: Close-Grip Bench Press (Smith/BB), sets: 3, reps: "8-12",  start: 32.5}
+      - {type: single, name: Wrist Curl + Reverse Curl (cable), sets: 3, reps: "15-20 each", start: "22.5,11.25"}
+      - {type: single, name: Seated Leg Extensions,             sets: 3, reps: "10-15", start: 32.5}
+
+  - name: Session B (Wed)
+    first_date: 2026-07-29
+    rooms: [cable, machine]
+    blocks:
+      - type: superset
+        label: SUPERSET A
+        note: one station, rope stays on — change pulley height only
+        exercises:
+          - {code: A1, name: Cable Rope Pushdown,    sets: 3, reps: "10-15", start: 27.5}
+          - {code: A2, name: Cable Rope Hammer Curl, sets: 3, reps: "10-14", start: 25}
+      - type: superset
+        label: SUPERSET B
+        note: one station, single handle stays on — both low-pulley moves
+        exercises:
+          - {code: B1, name: Cable Lateral Raise,   sets: 3, reps: "12-15", start: 11.25}
+          - {code: B2, name: Bayesian Cable Curl,   sets: 3, reps: "8-12",  start: 15}
+      - type: superset
+        label: SUPERSET C
+        note: one station, rope stays on
+        exercises:
+          - {code: C1, name: Overhead Tricep Extension, sets: 3, reps: "12-15", start: 11.25}
+          - {code: C2, name: Face Pulls (light/prehab), sets: 3, reps: "15-20", start: 15}
+      - {type: single, name: Rear Delt Machine,                sets: 3, reps: "12-15", start: 15}
+      - {type: single, name: Reverse Cable Curl (straight bar), sets: 3, reps: "12-15", start: 22.5}
+      - {type: single, name: Seated Leg Curl,                  sets: 3, reps: "10-15", start: 40}
+
+  - name: Session C (Fri)
+    first_date: 2026-07-31
+    rooms: [cable, dumbbell]
+    # Superset order alternates weekly — see alternate_supersets below.
+    alternate_supersets: true
+    alternate_start: B
+    blocks:
+      - type: superset
+        label: SUPERSET A
+        note: one station, EZ/straight bar stays on
+        exercises:
+          - {code: A1, name: Cable Curl (EZ bar),           sets: 3, reps: "10-14", start: 25}
+          - {code: A2, name: Reverse Grip Cable Pushdown,   sets: 3, reps: "10-15", start: 40}
+      - type: superset
+        label: SUPERSET B
+        note: both on the same incline bench in the DB section
+        exercises:
+          - {code: B1, name: Spider Curl (incline bench), sets: 3, reps: "8-12", start: 8}
+          - {code: B2, name: DB Skull Crushers,           sets: 3, reps: "8-12", start: 8}
+      - {type: single, name: Machine Shoulder Press, sets: 3, reps: "10-12", start: 27.5}
+      - type: single
+        name: Cable Lat Raise (Triple Drop Set)
+        sets: 2
+        reps: "to failure (3 drops)"
+        start: "11.25,10,7.5"
+      - {type: single, name: Wrist Curl + Reverse Curl (cable), sets: 3, reps: "15-20 each", start: "25,15"}
+      - {type: single, name: Plate Pinch Hold, sets: 2, reps: "30-45s hold", start: 10}
