@@ -1,0 +1,32 @@
+{
+  "version": "0.2",
+  "language": "en,en-GB",
+  "words": [
+    "Bayesian",
+    "cSpell",
+    "dumbbell",
+    "dumbbells",
+    "hypertrophy",
+    "Nippard",
+    "openpyxl",
+    "preacher",
+    "pulldown",
+    "pulldowns",
+    "pushdown",
+    "pushdowns",
+    "sqref",
+    "numfmt",
+    "numfmts",
+    "xlsx",
+    "yaml",
+    "deload",
+    "antagonist",
+    "eccentrics",
+    "microplates",
+    "hangable",
+    "prehab",
+    "unilateral",
+    "myonuclei"
+  ],
+  "ignorePaths": ["*.xlsx", "*.csv", "*.png", ".git/**"]
+}
